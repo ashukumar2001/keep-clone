@@ -10,14 +10,12 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: #202124;
-  color: #e8eaed;
   font-family: "Varela Round", sans-serif;
 }
 a {
   text-decoration: none;
-  color: #e8eaed;
 }
+
 .btn {
   border: none;
   background: transparent;
@@ -29,6 +27,12 @@ a {
   width: 2rem;
   transition: all 200ms ease;
   border-radius: 50%;
+}
+.btn-dark-mode {
+  color: #383b41;
+}
+.btn-dark-mode:hover {
+  color: #202124;
 }
 .btn:hover {
   color: #e8eaed;
@@ -43,7 +47,7 @@ HEADER
 nav {
   border-bottom: 1px solid grey;
   padding: 0.5rem 1rem;
-  background-color: #202124;
+  background-color: inherit;
 }
 .header {
   width: 100%;

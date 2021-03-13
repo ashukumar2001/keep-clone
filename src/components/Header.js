@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   MdSearch,
   MdRefresh,
@@ -6,7 +6,30 @@ import {
   MdBrightness5,
 } from "react-icons/md";
 
+const darkTheme = {
+  backgroundColor: "#202124",
+  color: "#e8eaed",
+};
+const lightTheme = {
+  backgroundColor: "#e8eaed00",
+  color: "#202124b1",
+};
+
 const Header = () => {
+  const [isDarkMode, setIsDarkMode] = useState(true);
+  useEffect(() => {
+    document.querySelector("body").style.backgroundColor = isDarkMode
+      ? darkTheme.backgroundColor
+      : lightTheme.backgroundColor;
+    document.querySelector("a").style.color = isDarkMode
+      ? darkTheme.color
+      : lightTheme.color;
+
+    document.querySelectorAll("button").forEach((button) => {
+      button.style.color = isDarkMode ? darkTheme.color : lightTheme.color;
+    });
+  }, [isDarkMode]);
+
   return (
     <nav>
       <div className="header">
@@ -30,7 +53,10 @@ const Header = () => {
           <button className="refresh-btn btn">
             <MdRefresh />
           </button>
-          <button className="toggle-theme btn">
+          <button
+            className="toggle-theme btn"
+            onClick={() => setIsDarkMode(!isDarkMode)}
+          >
             <MdBrightness4 />
           </button>
         </div>
