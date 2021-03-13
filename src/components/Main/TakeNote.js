@@ -6,8 +6,8 @@ const TakeNote = () => {
   return (
     <section className="take-note-container">
       <div className="input-container">
-        {takeNoteInputClassData.map((data) => {
-          return <TakeNoteInput data={data} />;
+        {takeNoteInputClassData.map((data, index) => {
+          return <TakeNoteInput key={index} data={data} />;
         })}
       </div>
       <TakeNoteControls />

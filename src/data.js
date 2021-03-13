@@ -6,7 +6,7 @@ export const takeNoteInputClassData = [
   },
   {
     querySelectorPlaceholder: "note-body-placeholder",
-    querySelectorInput: "note-title-input",
+    querySelectorInput: "note-body-input",
     placeholderText: "Take a note...",
   },
 ];

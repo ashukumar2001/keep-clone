@@ -67,7 +67,9 @@ nav {
 .searchbar-input:focus {
   outline: none;
 }
-
+.search-btn {
+  font-size: 1.5rem;
+}
 /* Control Button Container */
 .control-btn-container {
   width: 10%;
@@ -78,6 +80,7 @@ nav {
 }
 .refresh-btn,
 .toggle-theme {
+  font-size: 1.5rem;
   margin: 0 0.5rem;
   color: rgb(180, 180, 180);
 }
