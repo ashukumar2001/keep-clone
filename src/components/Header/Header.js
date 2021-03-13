@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  MdSearch,
-  MdRefresh,
-  MdBrightness4,
-  // MdBrightness5,
-} from "react-icons/md";
+import { MdSearch, MdRefresh, MdBrightness4 } from "react-icons/md";
 import Brand from "./Brand";
 import SearchBar from "./SearchBar";
 import Controls from "./Controls";
