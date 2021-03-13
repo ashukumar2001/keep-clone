@@ -1,0 +1,69 @@
+/*
+======
+MAIN 
+======
+*/
+main {
+  width: 100%;
+  /* background: lightblue; */
+}
+
+/* Take a note section */
+.take-note-container {
+  border: 1px solid grey;
+  padding: 0.8rem 1rem;
+  width: 40%;
+  margin: 3rem auto;
+  box-shadow: 1px 1px 5px rgb(31, 30, 30);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+}
+.note-title-input,
+.note-title-placeholder {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  min-height: auto;
+  /* border: 1px solid blue; */
+  /* font-weight: bolder; */
+}
+.note-body-input,
+.note-body-placeholder {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.note-title-placeholder,
+.note-body-placeholder {
+  color: grey;
+  position: absolute;
+  z-index: -1;
+}
+
+.note-title-input:focus,
+.note-body-input:focus {
+  outline: none;
+}
+
+.note-control-btn-container {
+  /* border: 1px solid rgb(206, 0, 0); */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.undo-btn,
+.redo-btn,
+.copy-btn,
+.close-btn {
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+.close-btn {
+  border-radius: 0;
+  justify-self: end;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.close-btn:hover {
+  background-color: transparent;
+}

@@ -1,0 +1,102 @@
+/*
+======== 
+HEADER 
+========
+*/
+
+nav {
+  border-bottom: 1px solid grey;
+  padding: 0.5rem 1rem;
+  background-color: inherit;
+}
+
+.header {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid rgb(120, 226, 255); */
+}
+
+/* Brand */
+.brand {
+  width: 10%;
+  /* border: 1px solid grey; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brand-logo {
+  width: 40px;
+}
+.brand-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+/* Search Bar */
+.searchbar {
+  /* border: 1px solid grey; */
+  background: rgb(89, 89, 89);
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 0.5rem;
+  padding: 0.3rem 1rem;
+  overflow: hidden;
+}
+
+.searchbar-form {
+  width: 90%;
+}
+.searchbar-input {
+  width: 100%;
+  font-size: 1rem;
+  background: inherit;
+  color: #e8eaed;
+  font-family: "Noto Sans JP", sans-serif;
+  /* font-size: 2rem; */
+  border: none;
+}
+.searchbar-input::placeholder {
+  color: #e8eaed;
+  font-family: "Noto Sans JP", sans-serif;
+}
+.searchbar-input:focus {
+  outline: none;
+}
+
+/* Control Button Container */
+.control-btn-container {
+  width: 10%;
+  /* border: 1px solid springgreen; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.refresh-btn,
+.toggle-theme {
+  margin: 0 0.5rem;
+  color: rgb(180, 180, 180);
+}
+.refresh-btn:hover,
+.toggle-theme:hover {
+  color: #e8eaed;
+}
+
+/* User */
+.user {
+  width: 5%;
+  /* border: 1px solid grey; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgb(0, 0, 0);
+}
