@@ -1,11 +1,10 @@
 import React from "react";
 
-function TakeNoteInput({ data }) {
-  const {
-    querySelectorPlaceholder,
-    querySelectorInput,
-    placeholderText,
-  } = data;
+function TakeNoteInput({
+  querySelectorPlaceholder,
+  querySelectorInput,
+  placeholderText,
+}) {
   return (
     <>
       <div className={querySelectorPlaceholder}>{placeholderText}</div>

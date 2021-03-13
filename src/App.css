@@ -8,7 +8,7 @@
 body {
   background: #202124;
   color: #e8eaed;
-  width: 100vw;
+  /* width: 100vw; */
   min-height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
@@ -24,12 +24,12 @@ a {
   background: transparent;
   color: rgb(180, 180, 180);
   margin: 0;
-  padding: 0.2rem;
   height: 2rem;
   width: 2rem;
   transition: all 200ms ease;
   border-radius: 50%;
   font-family: "Varela Round", sans-serif;
+  cursor: pointer;
 }
 .btn:hover {
   color: #e8eaed;
@@ -60,5 +60,8 @@ a {
   }
   .take-note-container {
     width: 80%;
+  }
+  .note-controls {
+    opacity: 1;
   }
 }

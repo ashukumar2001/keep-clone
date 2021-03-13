@@ -1,14 +1,20 @@
 import React from "react";
 import TakeNoteControls from "./TakeNoteControls";
 import TakeNoteInput from "./TakeNoteInput";
-import { takeNoteInputClassData } from "../../data";
 const TakeNote = () => {
   return (
     <section className="take-note-container">
       <div className="input-container">
-        {takeNoteInputClassData.map((data, index) => {
-          return <TakeNoteInput key={index} data={data} />;
-        })}
+        <TakeNoteInput
+          querySelectorPlaceholder="note-title-placeholder"
+          querySelectorInput="note-title-input"
+          placeholderText="Title"
+        />
+        <TakeNoteInput
+          querySelectorPlaceholder="note-body-placeholder"
+          querySelectorInput="note-body-input"
+          placeholderText="Take a note..."
+        />
       </div>
       <TakeNoteControls />
     </section>
