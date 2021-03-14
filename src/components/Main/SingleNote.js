@@ -27,9 +27,7 @@ const SingleNote = ({ note, removeNote }) => {
         <button
           className="copy-btn btn"
           onClick={() => {
-            navigator.clipboard
-              .writeText(noteDescriptionRef.current.innerText)
-              .then(() => console.log("copied to clipboard"));
+            navigator.clipboard.writeText(noteDescriptionRef.current.innerText);
           }}
         >
           <MdContentCopy />

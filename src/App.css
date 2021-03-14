@@ -39,6 +39,17 @@ a {
   outline: none;
 }
 
+/* Scroll bar cutomization */
+::-webkit-scrollbar {
+  width: 0.2rem;
+}
+::-webkit-scrollbar-track {
+  background-color: rgba(22, 22, 22, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(75, 75, 75, 0.5);
+}
+
 @media screen and (max-width: 768px) {
   .brand {
     width: 25%;

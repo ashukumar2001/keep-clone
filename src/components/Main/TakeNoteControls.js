@@ -1,7 +1,7 @@
 import React from "react";
 import { MdUndo, MdRedo, MdSend } from "react-icons/md";
 
-const TakeNoteControls = ({ refs, addNote }) => {
+const TakeNoteControls = ({ refs, addNote, setShowAllInput }) => {
   const { titleInputRef, bodyInputRef } = refs;
   return (
     <div className="note-control-btn-container">
@@ -25,6 +25,7 @@ const TakeNoteControls = ({ refs, addNote }) => {
           titleInputRef.current.blur();
           bodyInputRef.current.focus();
           bodyInputRef.current.blur();
+          setShowAllInput(false);
         }}
       >
         <MdSend />

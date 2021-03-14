@@ -77,16 +77,29 @@ Notes
 
 .notes-container {
   width: 100%;
+  /* border: 1px solid white; */
   margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+  justify-content: center;
   gap: 1rem;
   align-items: center;
+  transition: all 200ms ease-in-out;
   -webkit-tap-highlight-color: transparent;
 }
+
+.no-notes {
+  /* border: 1px solid black; */
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  margin-top: 3rem;
+  color: rgb(109, 112, 116);
+}
+
 .note {
   cursor: pointer;
-  border: 1px solid grey;
+  border: 1px solid rgb(82, 82, 82);
   padding: 0.8rem 1rem;
   border-radius: 0.5rem;
   transition: all 300ms ease-in-out;
@@ -108,7 +121,10 @@ Notes
 .note__description {
   font-size: 1rem;
   /* border: 1px solid black; */
+  max-height: 400px;
+  overflow-y: auto;
 }
+/* .overflow-y-scroll */
 .note__title,
 .note__description {
   margin-bottom: 1rem;

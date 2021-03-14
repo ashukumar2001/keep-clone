@@ -1,14 +1,18 @@
 import React from "react";
-import SingleNote from "./SingleNote";
 import { connect } from "react-redux";
+import SingleNote from "./SingleNote";
+import NoNotes from "./NoNotes";
 const Notes = ({ notes }) => {
   return (
     <section className="notes-container">
-      {notes && notes.length
-        ? notes.map((note) => {
-            return <SingleNote key={note.id} note={note} />;
-          })
-        : "No Notes"}
+      {notes && notes.length ? (
+        notes.map((note) => {
+          return <SingleNote key={note.id} note={note} />;
+        })
+      ) : (
+        <NoNotes />
+      )}
+
       {/* <SingleNote />
       <SingleNote />
       <SingleNote />

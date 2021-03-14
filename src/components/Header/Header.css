@@ -7,7 +7,9 @@ HEADER
 nav {
   border-bottom: 1px solid grey;
   padding: 0.5rem 1rem;
-  background-color: inherit;
+  background-color: #202124;
+  position: sticky;
+  top: 0;
 }
 
 .header {
@@ -15,6 +17,7 @@ nav {
   height: 3rem;
   display: flex;
   justify-content: space-between;
+  z-index: 1;
   /* border: 1px solid rgb(120, 226, 255); */
 }
 
