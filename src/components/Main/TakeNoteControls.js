@@ -1,6 +1,8 @@
 import React from "react";
-import { MdUndo, MdRedo, MdContentCopy } from "react-icons/md";
-const TakeNoteControls = ({ noteBodyInputRef }) => {
+import { MdUndo, MdRedo, MdSend } from "react-icons/md";
+
+const TakeNoteControls = ({ refs, addNote }) => {
+  const { titleInputRef, bodyInputRef } = refs;
   return (
     <div className="note-control-btn-container">
       <button className="undo-btn btn">
@@ -10,14 +12,23 @@ const TakeNoteControls = ({ noteBodyInputRef }) => {
         <MdRedo />
       </button>
       <button
-        className="copy-btn btn"
+        className="btn close-btn"
         onClick={() => {
-          navigator.clipboard.writeText(noteBodyInputRef.current.innerText);
+          const content = {
+            title: titleInputRef.current.innerText,
+            body: bodyInputRef.current.innerText,
+          };
+          addNote(content);
+          titleInputRef.current.innerText = null;
+          bodyInputRef.current.innerText = null;
+          titleInputRef.current.focus();
+          titleInputRef.current.blur();
+          bodyInputRef.current.focus();
+          bodyInputRef.current.blur();
         }}
       >
-        <MdContentCopy />
+        <MdSend />
       </button>
-      <button className="btn close-btn">Close</button>
     </div>
   );
 };

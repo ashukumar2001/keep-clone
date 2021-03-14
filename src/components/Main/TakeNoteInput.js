@@ -4,11 +4,13 @@ function TakeNoteInput({
   querySelectorPlaceholder,
   querySelectorInput,
   placeholderText,
+  refToAdd,
 }) {
   return (
     <>
       <div className={querySelectorPlaceholder}>{placeholderText}</div>
       <div
+        ref={refToAdd}
         className={querySelectorInput}
         contentEditable="true"
         aria-multiline="true"

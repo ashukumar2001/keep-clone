@@ -1,6 +1,12 @@
 import React, { useRef } from "react";
 import { MdDelete, MdContentCopy } from "react-icons/md";
-const SingleNote = () => {
+import { connect } from "react-redux";
+import { removeNote } from "../../redux/actions";
+const SingleNote = ({ note, removeNote }) => {
+  const {
+    id,
+    content: { title, body },
+  } = note;
   const noteControlsRef = useRef(null);
   const noteDescriptionRef = useRef(null);
   return (
@@ -13,11 +19,9 @@ const SingleNote = () => {
         noteControlsRef.current.classList.remove("show-note-controls")
       }
     >
-      <h4 className="note__title">This is note title</h4>
+      <h4 className="note__title">{title}</h4>
       <p className="note__description" ref={noteDescriptionRef}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem dolorum
-        exercitationem ea nesciunt cupiditate. Unde ipsum nulla cupiditate vel
-        quos!
+        {body}
       </p>
       <div ref={noteControlsRef} className="note-controls">
         <button
@@ -30,7 +34,7 @@ const SingleNote = () => {
         >
           <MdContentCopy />
         </button>
-        <button className="delete-btn btn">
+        <button className="delete-btn btn" onClick={() => removeNote(id)}>
           <MdDelete />
         </button>
       </div>
@@ -38,4 +42,4 @@ const SingleNote = () => {
   );
 };
 
-export default SingleNote;
+export default connect(null, { removeNote })(SingleNote);

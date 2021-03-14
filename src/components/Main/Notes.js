@@ -1,8 +1,15 @@
 import React from "react";
 import SingleNote from "./SingleNote";
-const Notes = () => {
+import { connect } from "react-redux";
+const Notes = ({ notes }) => {
   return (
     <section className="notes-container">
+      {notes && notes.length
+        ? notes.map((note) => {
+            return <SingleNote key={note.id} note={note} />;
+          })
+        : "No Notes"}
+      {/* <SingleNote />
       <SingleNote />
       <SingleNote />
       <SingleNote />
@@ -10,10 +17,14 @@ const Notes = () => {
       <SingleNote />
       <SingleNote />
       <SingleNote />
-      <SingleNote />
-      <SingleNote />
+      <SingleNote /> */}
     </section>
   );
 };
-
-export default Notes;
+const mapStateToProps = (state) => {
+  const { notes } = state;
+  return {
+    notes,
+  };
+};
+export default connect(mapStateToProps)(Notes);

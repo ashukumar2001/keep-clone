@@ -78,9 +78,8 @@ Notes
 .notes-container {
   width: 100%;
   margin: auto;
-  /* border: 1px solid white; */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
   gap: 1rem;
   align-items: center;
   -webkit-tap-highlight-color: transparent;
@@ -108,6 +107,7 @@ Notes
 }
 .note__description {
   font-size: 1rem;
+  /* border: 1px solid black; */
 }
 .note__title,
 .note__description {
